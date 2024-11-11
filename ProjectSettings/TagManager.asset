@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 432543703
+    locked: 0
+  - name: BackObject
+    uniqueID: 1265143819
+    locked: 0
+  - name: Ground
+    uniqueID: 631638675
+    locked: 0
+  - name: Object
+    uniqueID: 2062721243
+    locked: 0
+  - name: Player
+    uniqueID: 4291928933
+    locked: 0
+  - name: FrontObject
+    uniqueID: 294065695
+    locked: 0
