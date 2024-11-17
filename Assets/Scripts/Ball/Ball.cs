@@ -10,6 +10,8 @@ public class Ball : MonoBehaviour
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
 
+    private Animator animator;
+
     //Sensitivity
     public float sensitivity = 5f;
 
@@ -17,11 +19,13 @@ public class Ball : MonoBehaviour
     {
         isDragging = false;
         isMove = false;
+
     }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -71,6 +75,8 @@ public class Ball : MonoBehaviour
     void RollBall()
     {
         isMove = true;
+
+        animator.SetBool("isRoll", true);
 
         //Compute Swipe Direction
         Vector2 swipeDirection = endTouchPosition - startTouchPosition;
