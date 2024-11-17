@@ -10,19 +10,23 @@ public class LaneController : MonoBehaviour
 
     private CameraController cameraController;
 
-    //Current Roll Count
-    [SerializeField] private int remainRollCount;
+    private UI_CommonHeader commonHeader;
+
+    private int remainRollCount;
 
     private void Awake()
     {
         deckSlot = FindObjectOfType<DeckSlot>();
         stage = FindObjectOfType<Stage>();
         cameraController = FindObjectOfType<CameraController>();
+        commonHeader = FindObjectOfType<UI_CommonHeader>();
 
 
         ballLuncher = deckSlot.transform.GetChild(0);
 
         remainRollCount = stage.GetRollCount();
+
+        commonHeader.UpdateRollCount(remainRollCount);
     }
 
     /// <summary>
@@ -49,6 +53,7 @@ public class LaneController : MonoBehaviour
     public void DecreaseRollCount()
     {
         remainRollCount--;
+        commonHeader.UpdateRollCount(remainRollCount);
     }
 
     public int GetRemainRollCount()

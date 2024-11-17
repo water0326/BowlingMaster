@@ -5,6 +5,8 @@ public class PinChecker : MonoBehaviour
 {
     [SerializeField] private LaneController laneController;
 
+    [SerializeField] private UI_CommonHeader commonHeader;
+
     private Pin[] pins;
 
     private int pinCount;
@@ -14,6 +16,8 @@ public class PinChecker : MonoBehaviour
         pins = FindObjectsOfType<Pin>();
 
         pinCount = pins.Length;
+
+        commonHeader.UpdatePinCount(pinCount);
     }
 
     public void CheckPin()
@@ -31,6 +35,10 @@ public class PinChecker : MonoBehaviour
 
     public void DecreasePinCount()
     {
-        if (pinCount > 0) pinCount--;
+        if (pinCount > 0)
+        {
+            pinCount--;
+            commonHeader.UpdatePinCount(pinCount);
+        }
     }
 }
