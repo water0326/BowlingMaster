@@ -82,7 +82,7 @@ public class Ball : MonoBehaviour
         Vector2 swipeDirection = endTouchPosition - startTouchPosition;
 
         //Block Back Swipe & Horizontal Swipe
-        if (swipeDirection.y <= 0) return;
+        if (swipeDirection.y <= 0.2) return;
 
         //Set Force Direction;
         Vector2 forceDirection = new Vector2(swipeDirection.x, swipeDirection.y);

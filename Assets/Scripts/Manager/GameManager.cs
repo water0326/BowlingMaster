@@ -10,9 +10,12 @@ public class GameManager : MonoBehaviour
 
     private StageManager stage;
     private UIManager ui;
+    private SoundManager sound;
 
     public StageManager Stage { get { return instance.stage; } }
     public UIManager UI { get { return instance.ui; } }
+
+    public SoundManager Sound { get { return instance.sound; } }
 
     private void Awake()
     {
