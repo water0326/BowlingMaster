@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class BombBall : Ball
 {
+    [Header("Æø¹ß ¹Ý°æ")]
     [SerializeField] private float explosionRadius = 5f;
+
+    [Header("Æø¹ß·Â")]
     [SerializeField] private float explosionPower = 10f;
-    [SerializeField] LayerMask affectedLayers;
 
     protected override void Update()
     {
