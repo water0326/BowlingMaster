@@ -140,6 +140,11 @@ MonoBehaviour:
   minSpeed: 200
   maxSpeed: 500
   sensitivity: 0.5
+  explosionRadius: 2
+  explosionPower: 5
+  affectedLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &8468195053855626930
 Animator:
   serializedVersion: 5

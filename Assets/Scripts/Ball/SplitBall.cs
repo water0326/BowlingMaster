@@ -13,8 +13,6 @@ public class SplitBall : Ball
 
     private Vector3 currentPosition;
 
-    private SpriteRenderer spriteRenderer;
-
     protected override void Update()
     {
         base.Update();
@@ -59,12 +57,6 @@ public class SplitBall : Ball
         GameObject splitBall = Resources.Load<GameObject>(path);
 
         return splitBall;
-    }
-
-    private void HideBall()
-    {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteRenderer.color = new Color(1, 1, 1, 0);
     }
 }
 

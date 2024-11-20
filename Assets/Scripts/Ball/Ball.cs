@@ -15,6 +15,7 @@ public class Ball : MonoBehaviour
 
     protected Rigidbody2D rb;
     protected CircleCollider2D col;
+    protected SpriteRenderer spriteRenderer;
 
     private bool isDragging;
     private bool isDead;
@@ -148,5 +149,10 @@ public class Ball : MonoBehaviour
 
             finishLine.DeadBall(col);
         }
+    }
+    protected void HideBall()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.color = new Color(1, 1, 1, 0);
     }
 }

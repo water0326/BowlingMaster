@@ -10,12 +10,20 @@ public class Pin : MonoBehaviour
     private PinChecker pinChecker;
     private bool isColl = false;
 
+    private Rigidbody2D rigid;
+
     private void Start()
     {
         pinChecker = FindObjectOfType<PinChecker>();
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        FallDown();
+    }
+
+    public void FallDown()
     {
         if (!isColl)
         {
