@@ -27,6 +27,11 @@ public class FinishLine : MonoBehaviour
         //Only Check Ball
         if (!collision.CompareTag("Ball")) return;
 
+        DeadBall(collision);
+    }
+
+    public void DeadBall(Collider2D collision)
+    {
         StartCoroutine(InitCoroutine(collision));
     }
 

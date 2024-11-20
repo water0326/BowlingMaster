@@ -157,5 +157,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ac9b80d5b4cd7142b9c8fbe48d62c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 3100457640987083417}
+  minSpeed: 200
+  maxSpeed: 500
   sensitivity: 0.5
