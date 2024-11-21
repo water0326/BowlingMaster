@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    public bool onVine;
+
     [Header("최소 드래그 길이")]
     [SerializeField] protected float minSpeed = 200f;
 

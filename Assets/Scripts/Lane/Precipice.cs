@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Precipice : MonoBehaviour
@@ -15,7 +14,13 @@ public class Precipice : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Vine Ball") || collision.isTrigger) return;
+        //Exit Condition 1 : Vine and Trigger
+        if (collision.tag.Contains("Vine")|| collision.isTrigger) return;
+
+        Ball ball = collision.GetComponent<Ball>();
+
+        //Exit Condition 2 : Ball on Vine
+        if (ball != null) if (ball.onVine) return;
 
         Rigidbody2D rigid = collision.GetComponent<Rigidbody2D>();
 

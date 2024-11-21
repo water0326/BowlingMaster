@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbfff740d5ff32b4ba37fa5615b239cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onVine: 0
   minSpeed: 200
   maxSpeed: 500
   sensitivity: 0.5

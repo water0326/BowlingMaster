@@ -25,7 +25,7 @@ public class FinishLine : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Only Check Ball
-        if (!collision.CompareTag("Ball")) return;
+        if (!collision.tag.Contains("Ball")) return;
 
         DeadBall(collision);
     }
@@ -41,7 +41,7 @@ public class FinishLine : MonoBehaviour
 
         cameraController.UndoMove();
 
-        Destroy(collision.gameObject);
+        if(collision != null) Destroy(collision.gameObject);
 
         lane.GenerateBall();
 

@@ -7,6 +7,8 @@ TagManager:
   - Ball
   - Split Ball
   - Vine Ball
+  - Precipice
+  - Vine
   layers:
   - Default
   - TransparentFX

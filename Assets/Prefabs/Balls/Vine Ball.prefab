@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6147263819320437385}
   m_Layer: 0
   m_Name: Vine Ball
-  m_TagString: Ball
+  m_TagString: Vine Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,9 +137,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80a9f694a4582d04387c26efc7f9cc0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onVine: 0
   minSpeed: 200
   maxSpeed: 500
   sensitivity: 0.5
+  vinePrefab: {fileID: 3599396451438349952, guid: 85d8bbdba6a429546a32c594d9234065, type: 3}
+  vineInterval: 0.1
 --- !u!95 &6147263819320437385
 Animator:
   serializedVersion: 5
