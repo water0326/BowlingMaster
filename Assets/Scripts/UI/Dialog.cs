@@ -39,20 +39,31 @@ public class Dialog : MonoBehaviour
 
 	public IEnumerator AnimateText(string text, Transform target, Vector2 textPosOffset, float duration)
 	{
-		if(duration < totalTime) totalTime = duration - 0.2f;
+		// Replace literal "\n" with actual newline character
+		text = text.Replace("\\n", "\n");
+
+		if(duration < totalTime) totalTime = duration - 0.2f;	
 		Invoke(nameof(StopDisplay), duration);
 		this.target = target;
-		dialogText.text = text;
 		this.textPosOffset = textPosOffset;
 		dialogObject.SetActive(true);
 		
 		dialogText.text = "";
-		foreach (char letter in text.ToCharArray())
+		// text를 \n을 기준으로 분리하여 처리
+		string[] lines = text.Split('\n');
+		foreach (string line in lines)
 		{
-			// Using the totalTime field defined at class level
-			float intervalTime = totalTime / text.Length; // Time between each letter
-			dialogText.text += letter;
-			yield return new WaitForSeconds(intervalTime);
+			foreach (char letter in line.ToCharArray())
+			{
+				float intervalTime = totalTime / text.Length;
+				dialogText.text += letter;
+				yield return new WaitForSeconds(intervalTime);
+			}
+			// 줄바꿈 추가
+			if (line != lines[lines.Length - 1]) // 마지막 줄이 아닌 경우에만 줄바꿈 추가
+			{
+				dialogText.text += "\n";
+			}
 		}
 	}
 	public void StopDisplay() {

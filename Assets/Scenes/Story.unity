@@ -448,6 +448,7 @@ MonoBehaviour:
   - {fileID: 802653235}
   - {fileID: 157783225}
   - {fileID: 2037329816}
+  - {fileID: 1543125035}
 --- !u!4 &178121527
 Transform:
   m_ObjectHideFlags: 0
@@ -499,6 +500,7 @@ Transform:
   - {fileID: 822969658}
   - {fileID: 1665227708}
   - {fileID: 2073588233}
+  - {fileID: 1019107084}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1226,13 +1228,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1019107082}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.1, y: -1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 183621928}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1019107085
 Animator:
@@ -1355,6 +1357,108 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1543125033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1543125034}
+  - component: {fileID: 1543125035}
+  m_Layer: 0
+  m_Name: DialogCS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1543125034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543125033}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1903895588}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1543125035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543125033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d92972b147bdd5499c44c8c58f95699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog: {fileID: 398829054}
+  dialogueSequence:
+  - text: "\uC774\uAC8C \uBB50\uC57C! \uB0B4 \uC18C\uC911\uD55C \uC9D1\uC774 \\n
+      \uC5C9\uB9DD\uC774 \uB410\uC796\uC544! \\n\uAC1C\uAD6C\uB9AC\uC57C, \uB124\uAC00
+      \uC774\uB7AC\uC9C0?!"
+    speaker: {fileID: 1665227708}
+    textPosOffset: {x: 0, y: 0.48}
+    dialogDuration: 4
+  - text: "\uC5B4, \uB0B4 \uBCFC\uB9C1\uACF5\uC774 \uC800\uAE30\uB85C \uAD74\uB7EC\uAC00\uAE34
+      \uD588\uB294\uB370\u2026 \\n\uADF8\uAC8C \uADF8\uB807\uAC8C \uD070\uC77C\uC774\uC57C?"
+    speaker: {fileID: 1019107084}
+    textPosOffset: {x: 0, y: 0.69}
+    dialogDuration: 2
+  - text: "\uD070\uC77C\uC774\uB0D0\uACE0? \\n\uB0B4\uAC00 \uC5EC\uAE30 \uC0B4\uC558\uB2E8
+      \uB9D0\uC774\uC57C! \\n\uC9C0\uAE08\uC740 \uB2E4 \uBD80\uC11C\uC838\uC11C \uC274
+      \uACF3\uB3C4 \uC5C6\uACE0, \\n\uBE44\uC624\uBA74 \uC5B4\uB5BB\uAC8C \uD558\uB0D0\uACE0!"
+    speaker: {fileID: 1665227708}
+    textPosOffset: {x: 0, y: 0.48}
+    dialogDuration: 4
+  - text: "\uC74C\u2026 \uBE44 \uC624\uBA74 \uB098\uCC98\uB7FC \uC5F0\uBABB\uC5D0\uC11C
+      \uC790\uBA74 \uB418\uC9C0. \\n\uB108\uB3C4 \uC2B5\uAE30\uC5D0 \uC801\uC751\uD574
+      \uBCF4\uB294 \uAC8C \uC5B4\uB54C?"
+    speaker: {fileID: 1019107084}
+    textPosOffset: {x: 0, y: 0.69}
+    dialogDuration: 2
+  - text: "\uBB50?! \uB124\uAC00 \uC798\uBABB\uD55C \uAC74 \\n\uC778\uC815\uB3C4
+      \uC548 \uD558\uACE0, \uC0AC\uACFC\uB3C4 \\n\uC548 \uD558\uACA0\uB2E4\uB294
+      \uAC70\uC57C?!"
+    speaker: {fileID: 1665227708}
+    textPosOffset: {x: 0, y: 0.48}
+    dialogDuration: 4
+  - text: "\uC0AC\uACFC\uB294 \uC880\u2026 \\n\uC5B4\uCC28\uD53C \uC9D1\uC740 \uB2E4\uC2DC
+      \uC9C0\uC73C\uBA74 \uB418\uB294 \uAC70\uC796\uC544? \\n\uADF8\uB0E5 \uB118\uC5B4\uAC00\uC790\uACE0."
+    speaker: {fileID: 1019107084}
+    textPosOffset: {x: 0, y: 0.69}
+    dialogDuration: 4
+  - text: "\uADF8\uAC8C \uB124 \uB9D0\uD22C\uC57C? \\n\uB124\uAC00 \uB0A0 \uB3C4\uC640\uC8FC\uAE30\uB294\uCEE4\uB155,
+      \\n\uC544\uC9C1\uB3C4 \uC7A5\uB09C\uCE58\uACE0 \uC788\uC5B4? \\n\uB124 \uBCFC\uB9C1\uACF5\uC774
+      \uBB38\uC81C\uC600\uC73C\uB2C8 \uB124\uAC00 \\n\uCC45\uC784\uC838\uC57C \uD558\uB294
+      \uAC70 \uC544\uB2C8\uC57C?"
+    speaker: {fileID: 1665227708}
+    textPosOffset: {x: 0, y: 0.48}
+    dialogDuration: 2
+  - text: "\uBCFC\uB9C1\uC740 \uC6D0\uB798 \uACF5\uC774 \uAD74\uB7EC\uB2E4\uB2C8\uB294
+      \uAC8C \\n\uB9E4\uB825\uC778\uB370 \uB9D0\uC774\uC57C. \\n\uC5B4\uCA4C\uACA0\uC5B4,
+      \uC774\uBBF8 \uBC8C\uC5B4\uC9C4 \uC77C\uC778\uB370."
+    speaker: {fileID: 1019107084}
+    textPosOffset: {x: 0, y: 0.69}
+    dialogDuration: 4
+  - text: "\uADF8\uB798\uC11C \uB108 \uB098\uBCF4\uB2E4 \uBCFC\uB9C1 \uC798\uD574?
+      \\n\uC798\uD558\uB294 \uAC83\uB3C4 \uC544\uB2C8\uBA74\uC11C \u314B"
+    speaker: {fileID: 1019107084}
+    textPosOffset: {x: 0, y: 0.69}
+    dialogDuration: 4
+  - text: "\uC6B0\uC528....\uBCF5\uC218\uD560\uAC70\uC57C....!!"
+    speaker: {fileID: 1665227708}
+    textPosOffset: {x: 0, y: 0.48}
+    dialogDuration: 4
 --- !u!1 &1579814367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,6 +2189,7 @@ Transform:
   - {fileID: 802653234}
   - {fileID: 157783224}
   - {fileID: 2037329815}
+  - {fileID: 1543125034}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2175,7 +2280,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u3141\u3141"
+  m_text: "\uC544\n\uC544\n\uC544"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2725c3cb51f5ec347987cf57637d5530, type: 2}
   m_sharedMaterial: {fileID: -1012485544648950611, guid: 2725c3cb51f5ec347987cf57637d5530, type: 2}
@@ -2209,7 +2314,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
