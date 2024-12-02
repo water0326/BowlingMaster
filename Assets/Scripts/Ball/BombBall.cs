@@ -1,57 +1,75 @@
+using System.Collections;
 using UnityEngine;
 
 public class BombBall : Ball
 {
-    [Header("Æø¹ß ¹Ý°æ")]
-    [SerializeField] private float explosionRadius = 5f;
+	[Header("ï¿½ï¿½ï¿½ï¿½ ï¿½Ý°ï¿½")]
+	[SerializeField] private float explosionRadius = 5f;
 
-    [Header("Æø¹ß·Â")]
-    [SerializeField] private float explosionPower = 10f;
+	[Header("ï¿½ï¿½ï¿½ß·ï¿½")]
+	[SerializeField] private float explosionPower = 10f;
 
-    protected override void Update()
-    {
-        base.Update();
+	protected override void Update()
+	{
+		base.Update();
 
-        Bomb(transform.position);
-    }
+		Bomb(transform.position);
+	}
 
-    void Bomb(Vector2 explosinoPosition)
-    {
-        if (!DetectSkill()) return;
+	void Bomb(Vector2 explosinoPosition)
+	{
+		if (!DetectSkill()) return;
 
-        canSkill = false;
+		canSkill = false;
 
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(explosinoPosition, explosionRadius);
+		Collider2D[] colliders = Physics2D.OverlapCircleAll(explosinoPosition, explosionRadius);
 
-        foreach (Collider2D collider in colliders)
-        {
-            if (collider.gameObject == this.gameObject)
-            {
-                collider.isTrigger = true;
-                continue;   //º»ÀÎÀº ¿µÇâÀ» ¹ÞÁö ¾ÊÀ½
-            }
+		foreach (Collider2D collider in colliders)
+		{
+			if (collider.gameObject == this.gameObject)
+			{
+				collider.isTrigger = true;
+				continue;   //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+			}
 
-            Rigidbody2D rigid = collider.GetComponent<Rigidbody2D>();
+			Rigidbody2D rigid = collider.GetComponent<Rigidbody2D>();
 
-            if (rigid != null)
-            {
-                Vector2 direction = rigid.position - explosinoPosition; //Æø¹ß Áß½É¿¡¼­ÀÇ ¹æÇâ
+			if (rigid != null)
+			{
+				Vector2 direction = rigid.position - explosinoPosition; //ï¿½ï¿½ï¿½ï¿½ ï¿½ß½É¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
-                float distance = direction.magnitude;           //Æø¹ß Áß½É¿¡¼­ÀÇ º¤ÅÍ ½ºÄ®¶ó
-                float force = explosionPower / (distance + 1); //°Å¸®¿¡ µû¸¥ Æø¹ß·Â °¨¼Ò
-                rigid.AddForce(direction.normalized * force, ForceMode2D.Impulse);
+				float distance = direction.magnitude;           //ï¿½ï¿½ï¿½ï¿½ ï¿½ß½É¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä®ï¿½ï¿½
+				float force = explosionPower / (distance + 1); //ï¿½Å¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß·ï¿½ ï¿½ï¿½ï¿½ï¿½
+				rigid.AddForce(direction.normalized * force, ForceMode2D.Impulse);
 
-                //Á÷Á¢ Ãæµ¹ÀÌ ¾Æ´Ñ Æø¹ß·Î ÀÎÇØ ¾²·¯Áö´Â ÇÉ Fall Down Ã³¸®
+				//ï¿½ï¿½ï¿½ï¿½ ï¿½æµ¹ï¿½ï¿½ ï¿½Æ´ï¿½ ï¿½ï¿½ï¿½ß·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Fall Down Ã³ï¿½ï¿½
 
-                Pin pin = collider.GetComponent<Pin>();
+				Pin pin = collider.GetComponent<Pin>();
 
-                if (pin != null)
-                {
-                    pin.FallDown();
-                }
-            }
-        }
+				if (pin != null)
+				{
+					pin.FallDown();
+				}
+			}
+		}
 
-        HideBall();
-    }
+		transform.up = Vector2.up;
+		rb.velocity = Vector2.zero;
+		animator.SetBool("hasBursted", true);
+		StartCoroutine(HideBallCoroutine());
+		
+	}
+	
+	IEnumerator HideBallCoroutine()
+	{
+		AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+		while (!stateInfo.IsName("Ball_Burst") || stateInfo.normalizedTime < 1.0f)
+		{
+			stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+			yield return null;
+		}
+		print("TEST");
+		HideBall();
+		ForceDeadBall();
+	}
 }

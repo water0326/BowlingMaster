@@ -1,0 +1,709 @@
+fileFormatVersion: 2
+guid: 2f4b350dcfbd61b478eebcb8aa9a09d6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: burst_particle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef09b8ecf80be074eb8dcce46504c72e
+      internalID: -767539015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_1
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c012cb2b0a2c2647a27ae7787912ad3
+      internalID: 1025321226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_2
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac0346c0a257a84e825b6c7db7c3f7a
+      internalID: -106110959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_3
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36926fb008178be44976e87541066de1
+      internalID: -827650921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_4
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497d89dd897bd5c4eaf0e79db6b7e32c
+      internalID: 1490909873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_5
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1600
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c396e99bbefa2f4b833fba4dd3f9e00
+      internalID: -276083598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9f62018cd318e42b63f9f7c561cab9
+      internalID: 2078906357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_7
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3dba1b73bb580e409eebe12be74d6bd
+      internalID: -189380564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d35cc97d72cfd5f4dbfc53e6b819282e
+      internalID: -539495852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_9
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 1200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f767d7dd3b139b243b71c37d301a6227
+      internalID: -117972780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_10
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15968b280c29c84aa3e42598fe201f1
+      internalID: 1416756361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_11
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 1200
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc3cdcb55d7a184fb5dbbd49169aff2
+      internalID: 539512639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd777957a863ad439bfbecb32fe918d
+      internalID: 448551793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_13
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a3bb75f12a04f4194f96b352dcbb1e
+      internalID: 1422755749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba7daff53a4a9b459b7c5d54a7111a6
+      internalID: -1960173750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5136dbcabd1047048bfc4323274ffec1
+      internalID: -1910025152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_16
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0e901a39662a94baab21474d8fbe2b
+      internalID: -948483023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_17
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 800
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8d8bf28cd412c40ba228f989b1eb54
+      internalID: 1187940379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 490caf7bc3152604fb6862da3f40d37d
+      internalID: -807778872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ed945d45bcf61f4a8e847fbdbcd7b44
+      internalID: 1149612081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_20
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46925911470fada4f941339d2ce15856
+      internalID: -1528620495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_21
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b49c7bd423792304494847393adcf2c5
+      internalID: -111168566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_22
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acfe6b67eb297004a931763db5e64748
+      internalID: 839632389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_23
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 400
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97796cc0e64dff145a2509bb8aee0446
+      internalID: -1248940854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burst_particle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84febdfe965d02b41a5d759c9e0be1a7
+      internalID: -638036971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      burst_particle_19: 1149612081
+      burst_particle_0: -767539015
+      burst_particle_13: 1422755749
+      burst_particle_7: -189380564
+      burst_particle_22: 839632389
+      burst_particle_12: 448551793
+      burst_particle_20: -1528620495
+      burst_particle_5: -276083598
+      burst_particle_2: -106110959
+      burst_particle_3: -827650921
+      burst_particle_15: -1910025152
+      burst_particle_10: 1416756361
+      burst_particle_18: -807778872
+      burst_particle_21: -111168566
+      burst_particle_14: -1960173750
+      burst_particle_17: 1187940379
+      burst_particle_6: 2078906357
+      burst_particle_23: -1248940854
+      burst_particle_24: -638036971
+      burst_particle_11: 539512639
+      burst_particle_9: -117972780
+      burst_particle_8: -539495852
+      burst_particle_16: -948483023
+      burst_particle_1: 1025321226
+      burst_particle_4: 1490909873
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
