@@ -5,6 +5,7 @@ public class StageManager : MonoBehaviour
 {
     public void ReStart()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

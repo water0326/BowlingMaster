@@ -13,6 +13,8 @@ public class FinishLine : MonoBehaviour
 
     private PinChecker pinChecker;
 
+    private Score score;
+
     [SerializeField] private float initDelay = 1f;
 
     private void Start()
@@ -20,6 +22,7 @@ public class FinishLine : MonoBehaviour
         lane = FindObjectOfType<LaneController>();
         cameraController = FindObjectOfType<CameraController>();
         pinChecker = FindObjectOfType<PinChecker>();
+        score = FindObjectOfType<Score>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -44,6 +47,8 @@ public class FinishLine : MonoBehaviour
         if(collision != null) Destroy(collision.gameObject);
 
         lane.GenerateBall();
+
+        score.UpdateScore();
 
         pinChecker.CheckPin();
     }

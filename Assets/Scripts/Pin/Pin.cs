@@ -28,10 +28,10 @@ public class Pin : MonoBehaviour
         if (!isColl)
         {
             isColl = true;
-            pinChecker.DecreasePinCount();
-        }
 
-        StartCoroutine(DestroyPin());
+            pinChecker.DecreasePinCount();
+            StartCoroutine(DestroyPin());
+        }
     }
 
     IEnumerator DestroyPin()

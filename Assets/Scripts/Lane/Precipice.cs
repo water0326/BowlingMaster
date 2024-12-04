@@ -49,5 +49,7 @@ public class Precipice : MonoBehaviour
         collision.transform.localScale = Vector3.zero;
 
         if (collision.CompareTag("Ball")) finishLine.DeadBall(collision);
+
+        StopAllCoroutines();
     }
 }

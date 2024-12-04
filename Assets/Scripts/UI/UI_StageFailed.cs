@@ -1,4 +1,5 @@
 //Unity
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,8 @@ public class UI_StageFailed : MonoBehaviour
 
     private void OnEnable()
     {
+        Time.timeScale = 0f;
+
         restart.onClick.AddListener(GameManager.instance.Stage.ReStart);
     }
 }

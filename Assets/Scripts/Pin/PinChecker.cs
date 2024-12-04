@@ -7,6 +7,10 @@ public class PinChecker : MonoBehaviour
 
     [SerializeField] private UI_CommonHeader commonHeader;
 
+    [SerializeField] private Stage stage;
+
+    [SerializeField] private Score score;
+
     private Pin[] pins;
 
     private int pinCount;
@@ -16,6 +20,8 @@ public class PinChecker : MonoBehaviour
         pins = FindObjectsOfType<Pin>();
 
         pinCount = pins.Length;
+
+        stage.UpdateStartPinCount(pinCount);
 
         commonHeader.UpdatePinCount(pinCount);
     }
@@ -40,5 +46,10 @@ public class PinChecker : MonoBehaviour
             pinCount--;
             commonHeader.UpdatePinCount(pinCount);
         }
+    }
+
+    public int GetPinCount()
+    {
+        return pinCount;
     }
 }

@@ -35,7 +35,8 @@ public class VineBall : Ball
     {
         while (isVine)
         {
-            Instantiate(vinePrefab, transform.position, Quaternion.identity);
+            GameObject vine = Instantiate(vinePrefab, transform.position, Quaternion.identity);
+            vine.transform.up = rb.velocity.normalized;
 
             yield return new WaitForSeconds(vineInterval);
         }

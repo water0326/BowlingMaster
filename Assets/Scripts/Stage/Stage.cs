@@ -11,6 +11,11 @@ public class Stage : MonoBehaviour
     [Header("°ø ¼±ÅÃ ÆË¾÷")]
     [SerializeField] private GameObject ballSelectPopUp;
 
+    [Header("º°Á¡ ÄÆ ¹è¿­")]
+    [SerializeField] private int[] starScores;
+
+    private int startPinCount;
+
     private void Start()
     {
         Instantiate(ballSelectPopUp);
@@ -24,5 +29,25 @@ public class Stage : MonoBehaviour
     public int GetRollCount()
     {
         return rollCount;
+    }
+
+    public int GetStarScore(int _index)
+    {
+        return starScores[_index];
+    }
+
+    public void UpdateStartPinCount(int _count)
+    {
+        startPinCount = _count;
+    }
+
+    public int GetStartPinCount()
+    {
+        return startPinCount;
+    }
+
+    public int GetStarCount()
+    {
+        return starScores.Length;
     }
 }

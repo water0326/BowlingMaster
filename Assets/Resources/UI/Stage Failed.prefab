@@ -1004,7 +1004,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 10500
+  m_Text: 0
 --- !u!1 &7021422419046513663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1121,6 +1121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   restart: {fileID: 1440242850228694534}
   main: {fileID: 3499339980931956614}
+  scoreText: {fileID: 1354738958277247076}
 --- !u!1 &7938518165685593436
 GameObject:
   m_ObjectHideFlags: 0
