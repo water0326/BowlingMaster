@@ -6,34 +6,35 @@ using TMPro;
 
 public class UI_StageClear : MonoBehaviour
 {
-    [SerializeField] private Button nextStage;
-    [SerializeField] private Button restart;
-    [SerializeField] private Button main;
+	[SerializeField] private Button nextStage;
+	[SerializeField] private Button restart;
+	[SerializeField] private Button main;
 
-    [Header("º° Á¡ ÀÌ¹ÌÁö ¹è¿­")]
-    [SerializeField] private Image[] starImages;
+	[Header("ï¿½ï¿½ ï¿½ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ ï¿½è¿­")]
+	[SerializeField] private Image[] starImages;
 
-    [Header("º° ÄÑÁü ½ºÇÁ¶óÀÌÆ®")]
-    [SerializeField] private Sprite starON;
+	[Header("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®")]
+	[SerializeField] private Sprite starON;
 
-    [Header("Score Text")]
-    [SerializeField] private Text scoreText;
+	[Header("Score Text")]
+	[SerializeField] private Text scoreText;
 
-    private Score score;
+	private Score score;
 
-    private void OnEnable()
-    {
-        Time.timeScale = 0f;
+	private void OnEnable()
+	{
+		Time.timeScale = 0f;
 
-        restart.onClick.AddListener(GameManager.instance.Stage.ReStart);
+		restart.onClick.AddListener(GameManager.instance.Stage.ReStart);
+		nextStage.onClick.AddListener(GameManager.instance.Stage.NextLevel);
 
-        score = FindObjectOfType<Score>();
+		score = FindObjectOfType<Score>();
 
-        for (int i = 0; i < score.GetStarNum(); i++)
-        {
-            starImages[i].sprite = starON;
-        }
+		for (int i = 0; i < score.GetStarNum(); i++)
+		{
+			starImages[i].sprite = starON;
+		}
 
-        scoreText.text = score.GetCurrentScore().ToString();
-    }
+		scoreText.text = score.GetCurrentScore().ToString();
+	}
 }

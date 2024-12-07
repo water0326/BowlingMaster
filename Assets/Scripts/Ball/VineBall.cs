@@ -1,16 +1,16 @@
 using UnityEngine;
-
 using System.Collections;
 
 public class VineBall : Ball
 {
-    [Header("µ¢Äğ ÇÁ¸®ÆÕ")]
+    [Header("ë©êµ´ í”„ë¦¬íŒ¹")]
     [SerializeField] private GameObject vinePrefab;
 
-    [Header("µ¢Äğ »ı¼º ÁÖ±â")]
-    [SerializeField] private float vineInterval = 0.1f;
+    [Header("ë©êµ´ ìƒì„± ê±°ë¦¬")]
+    [SerializeField] private float vineDistance = 1.0f;
 
     private bool isVine = false;
+    private Vector3 lastVinePosition;
 
     protected override void Update()
     {
@@ -22,6 +22,12 @@ public class VineBall : Ball
         if (!isVine)
         {
             isVine = true;
+            lastVinePosition = transform.position;
+            
+            // ë©êµ´ì„ ì¦‰ì‹œ ï¿½ì„±
+            GameObject vine = Instantiate(vinePrefab, transform.position, Quaternion.identity);
+            vine.transform.up = rb.velocity.normalized;
+            
             StartCoroutine(VineCoroutine());
         }
     }
@@ -35,10 +41,14 @@ public class VineBall : Ball
     {
         while (isVine)
         {
-            GameObject vine = Instantiate(vinePrefab, transform.position, Quaternion.identity);
-            vine.transform.up = rb.velocity.normalized;
-
-            yield return new WaitForSeconds(vineInterval);
+            float distanceMoved = Vector3.Distance(lastVinePosition, transform.position);
+            if (distanceMoved >= vineDistance)
+            {
+                GameObject vine = Instantiate(vinePrefab, transform.position, Quaternion.identity);
+                vine.transform.up = rb.velocity.normalized;
+                lastVinePosition = transform.position;
+            }
+            yield return null; // ë§¤ í”„ë ˆì„ë§ˆë‹¤ ì²´í¬
         }
     }
 
@@ -50,6 +60,5 @@ public class VineBall : Ball
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Precipice")) StopVine();
-
     }
 }

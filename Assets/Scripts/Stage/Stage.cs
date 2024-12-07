@@ -1,53 +1,64 @@
+using System.Collections;
 using UnityEngine;
 
 public class Stage : MonoBehaviour
 {
-    [Header("½ºÅ×ÀÌÁö º° º¼ ¼±ÅÃ °¡´É È½¼ö (º°µµ ¼³Á¤)")]
-    [SerializeField] private int[] selectableCount;
+	[Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)")]
+	[SerializeField] private int[] selectableCount;
 
-    [Header("½ºÅ×ÀÌÁö º° °øÀ» ±¼¸± ¼ö ÀÖ´Â È½¼ö (º°µµ ¼³Á¤)")]
-    [SerializeField] private int rollCount;
+	[Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ È½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)")]
+	[SerializeField] private int rollCount;
 
-    [Header("°ø ¼±ÅÃ ÆË¾÷")]
-    [SerializeField] private GameObject ballSelectPopUp;
+	[Header("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¾ï¿½")]
+	[SerializeField] private GameObject ballSelectPopUp;
 
-    [Header("º°Á¡ ÄÆ ¹è¿­")]
-    [SerializeField] private int[] starScores;
+	[Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½è¿­")]
+	[SerializeField] private int[] starScores;
 
-    private int startPinCount;
+	[Header("ì¹´ë©”ë¼")]
+	[SerializeField] private CameraController cameraController;
 
-    private void Start()
-    {
-        Instantiate(ballSelectPopUp);
-    }
+	private int startPinCount;
 
-    public int GetSelectableCount(int _index)
-    {
-        return selectableCount[_index];
-    }
+	
 
-    public int GetRollCount()
-    {
-        return rollCount;
-    }
+	private void Start()
+	{
+		StartCoroutine(WaitForCamera());
+	}
 
-    public int GetStarScore(int _index)
-    {
-        return starScores[_index];
-    }
+	private IEnumerator WaitForCamera() {
+		yield return new WaitUntil(() => cameraController.isReady);
+		Instantiate(ballSelectPopUp);
+	}
 
-    public void UpdateStartPinCount(int _count)
-    {
-        startPinCount = _count;
-    }
+	public int GetSelectableCount(int _index)
+	{
+		return selectableCount[_index];
+	}
 
-    public int GetStartPinCount()
-    {
-        return startPinCount;
-    }
+	public int GetRollCount()
+	{
+		return rollCount;
+	}
 
-    public int GetStarCount()
-    {
-        return starScores.Length;
-    }
+	public int GetStarScore(int _index)
+	{
+		return starScores[_index];
+	}
+
+	public void UpdateStartPinCount(int _count)
+	{
+		startPinCount = _count;
+	}
+
+	public int GetStartPinCount()
+	{
+		return startPinCount;
+	}
+
+	public int GetStarCount()
+	{
+		return starScores.Length;
+	}
 }

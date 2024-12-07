@@ -7,49 +7,60 @@ using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
-    private LaneController lane;
+	private LaneController lane;
 
-    private CameraController cameraController;
+	private CameraController cameraController;
 
-    private PinChecker pinChecker;
+	private PinChecker pinChecker;
 
-    private Score score;
+	private Score score;
 
-    [SerializeField] private float initDelay = 1f;
+	public GameObject skipButton;
 
-    private void Start()
-    {
-        lane = FindObjectOfType<LaneController>();
-        cameraController = FindObjectOfType<CameraController>();
-        pinChecker = FindObjectOfType<PinChecker>();
-        score = FindObjectOfType<Score>();
-    }
+	[SerializeField] private float initDelay = 1f;
+	
+	public GameObject currentBall;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        //Only Check Ball
-        if (!collision.tag.Contains("Ball")) return;
+	private void Start()
+	{
+		lane = FindObjectOfType<LaneController>();
+		cameraController = FindObjectOfType<CameraController>();
+		pinChecker = FindObjectOfType<PinChecker>();
+		score = FindObjectOfType<Score>();
+		skipButton.SetActive(false);
+	}
 
-        DeadBall(collision);
-    }
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		//Only Check Ball
+		if (!collision.tag.Contains("Ball")) return;
 
-    public void DeadBall(Collider2D collision)
-    {
-        StartCoroutine(InitCoroutine(collision));
-    }
+		DeadBall(collision);
+	}
 
-    IEnumerator InitCoroutine(Collider2D collision)
-    {
-        yield return new WaitForSeconds(initDelay);
+	public void DeadBall(Collider2D collision)
+	{
+		StartCoroutine(InitCoroutine(collision));
+	}
+	
+	public void SkipBall() 
+	{
+		StartCoroutine(InitCoroutine(currentBall.GetComponent<Collider2D>()));
+	}
 
-        cameraController.UndoMove();
+	IEnumerator InitCoroutine(Collider2D collision)
+	{
+		skipButton.SetActive(false);
+		yield return new WaitForSeconds(initDelay);
 
-        if(collision != null) Destroy(collision.gameObject);
+		cameraController.UndoMove();
 
-        lane.GenerateBall();
+		if(collision != null) Destroy(collision.gameObject);
 
-        score.UpdateScore();
+		lane.GenerateBall();
 
-        pinChecker.CheckPin();
-    }
+		score.UpdateScore();
+
+		pinChecker.CheckPin();
+	}
 }
