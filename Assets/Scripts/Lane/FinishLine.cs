@@ -17,7 +17,7 @@ public class FinishLine : MonoBehaviour
 
 	public GameObject skipButton;
 
-	[SerializeField] private float initDelay = 1f;
+	private float initDelay = 0.3f;
 	
 	public GameObject currentBall;
 

@@ -164,20 +164,18 @@ public class Ball : MonoBehaviour
 
 	public void DeadBall()
 	{
-		if (rb.velocity.y < 0f && isMove && !isDead)
+		if(transform.position.y < -4.6f && isMove && !isDead) // POOP CODE
 		{
-			if(checkVelocityCoroutine == null)
-			{
-				checkVelocityCoroutine = StartCoroutine(CheckVelocity(col));
-			}
-			
+			isDead = true;
+			FinishLine finishLine = FindObjectOfType<FinishLine>();
+			finishLine.DeadBall(col);
 		}
 	}
 	
 	private IEnumerator CheckVelocity(Collider2D col)
 	{
 		float elapsedTime = 0f;
-		float checkDuration = 3f;
+		float checkDuration = 10f;
 		
 		while(elapsedTime < checkDuration)
 		{
@@ -193,8 +191,10 @@ public class Ball : MonoBehaviour
 		isDead = true;
 
 		FinishLine finishLine = FindObjectOfType<FinishLine>();
-
-		finishLine.DeadBall(col);
+		if(col != null)
+		{
+			finishLine.DeadBall(col);
+		}
 	}
 	
 	
