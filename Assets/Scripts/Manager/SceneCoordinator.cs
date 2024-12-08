@@ -41,8 +41,14 @@ public class SceneCoordinator : MonoBehaviour
 			Destroy(gameObject);
 		}
 	}
+	
+	public void LoadScene(string sceneName)
+	{
+		StartCoroutine(LoadSceneCoroutine(sceneName));
+	}
+	
 
-	public IEnumerator LoadSceneCoroutine(string sceneName)
+	private IEnumerator LoadSceneCoroutine(string sceneName)
 	{
 		yield return StartCoroutine(FadeOut());
 
@@ -51,7 +57,6 @@ public class SceneCoordinator : MonoBehaviour
 		{
 			yield return null;
 		}
-
 		yield return StartCoroutine(FadeIn());
 	}
 

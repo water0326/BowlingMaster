@@ -59637,7 +59637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f5d217c508a9949a538a71cd5eea71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableCount: 0200000000000000000000000000000000000000
+  selectableCount: 0100000001000000010000000100000001000000
   rollCount: 2
   ballSelectPopUp: {fileID: 358324849985983238, guid: 9b53ce9e12168bb45b7035df34791a1c, type: 3}
   starScores: f4010000e8030000dc050000

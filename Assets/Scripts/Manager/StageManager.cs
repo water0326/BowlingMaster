@@ -6,16 +6,24 @@ public class StageManager : MonoBehaviour
 	
 	public void NextLevel() 
 	{
+		Time.timeScale = 1f;
 		string sceneName = SceneManager.GetActiveScene().name;
 		int index = int.Parse(sceneName.Split(' ')[1]);
 		index++;
-		SceneCoordinator.Instance.StartCoroutine(SceneCoordinator.Instance.LoadSceneCoroutine("Stage " + index));
+		print("Stage " + index);
+		SceneCoordinator.Instance.LoadScene("Stage " + index);
 	}
 	
 	public void ReStart()
 	{
 		Time.timeScale = 1f;
-		SceneCoordinator.Instance.StartCoroutine(SceneCoordinator.Instance.LoadSceneCoroutine(SceneManager.GetActiveScene().name));
+		SceneCoordinator.Instance.LoadScene(SceneManager.GetActiveScene().name);
+	}
+	
+	public void ToMain()
+	{
+		Time.timeScale = 1f;
+		SceneCoordinator.Instance.LoadScene("Main");
 	}
 
 	public void StageClear()

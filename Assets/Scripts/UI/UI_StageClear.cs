@@ -7,7 +7,6 @@ using TMPro;
 public class UI_StageClear : MonoBehaviour
 {
 	[SerializeField] private Button nextStage;
-	[SerializeField] private Button restart;
 	[SerializeField] private Button main;
 
 	[Header("�� �� �̹��� �迭")]
@@ -25,7 +24,7 @@ public class UI_StageClear : MonoBehaviour
 	{
 		Time.timeScale = 0f;
 
-		restart.onClick.AddListener(GameManager.instance.Stage.ReStart);
+		main.onClick.AddListener(GameManager.instance.Stage.ToMain);
 		nextStage.onClick.AddListener(GameManager.instance.Stage.NextLevel);
 
 		score = FindObjectOfType<Score>();
@@ -36,5 +35,11 @@ public class UI_StageClear : MonoBehaviour
 		}
 
 		scoreText.text = score.GetCurrentScore().ToString();
+
+		string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+		if (int.TryParse(System.Text.RegularExpressions.Regex.Match(sceneName, @"\d+").Value, out int stageNumber))
+		{
+			DataManager.Instance.SaveClearedStage(stageNumber);
+		}
 	}
 }

@@ -25,10 +25,17 @@ public class StageSelect : MonoBehaviour
 
 	void Start()
 	{
+		int clearedStage = DataManager.Instance.LoadClearedStage();
+
 		for (int i = 0; i < stageButtons.Length; i++)
 		{
 			int index = i;
 			stageButtons[i].button.onClick.AddListener(() => LoadStage(index));
+
+			if (i > clearedStage)
+			{
+				stageButtons[i].button.interactable = false;
+			}
 		}
 	}
 
@@ -36,7 +43,7 @@ public class StageSelect : MonoBehaviour
 	{
 		if (index < stageButtons.Length)
 		{
-			SceneCoordinator.Instance.StartCoroutine(SceneCoordinator.Instance.LoadSceneCoroutine(stageButtons[index].sceneName));
+			SceneCoordinator.Instance.LoadScene(stageButtons[index].sceneName);
 		}
 	}
 

@@ -13,5 +13,6 @@ public class UI_StageFailed : MonoBehaviour
         Time.timeScale = 0f;
 
         restart.onClick.AddListener(GameManager.instance.Stage.ReStart);
+		main.onClick.AddListener(GameManager.instance.Stage.ToMain);
     }
 }
