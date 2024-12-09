@@ -44,6 +44,7 @@ public class SceneCoordinator : MonoBehaviour
 	
 	public void LoadScene(string sceneName)
 	{
+		Time.timeScale = 1f;
 		StartCoroutine(LoadSceneCoroutine(sceneName));
 	}
 	

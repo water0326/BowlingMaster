@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8061172795bdc5e428377c771a0ed023, type: 3}
+  m_Name: InGame
+  m_EditorClassIdentifier: 
+  bgmList: []
+  sfxList:
+  - key: Pin
+    clip: {fileID: 8300000, guid: 44e76dfd191209d488a9a742d17150ac, type: 3}
+  - key: Ball_Roll
+    clip: {fileID: 8300000, guid: 188acbf03e8fad14f99ea096ddc6a44d, type: 3}
