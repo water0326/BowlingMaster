@@ -6,14 +6,14 @@ public class Ball : MonoBehaviour
 {
 	public bool onVine;
 
-	[Header("�ּ� �巡�� ����")]
+	[Header("Min Speed")]
 	[SerializeField] protected float minSpeed = 200f;
 
-	[Header("�ִ� �巡�� ����")]
+	[Header("�Max Speed")]
 	[SerializeField] protected float maxSpeed = 500f;
 
 	//Sensitivity
-	[Header("�巡�� �ΰ���")]
+	[Header("Sensitivity")]
 	[SerializeField] protected float sensitivity = 0.5f;
 	
 	[Header("Arrow Event")]
@@ -119,9 +119,22 @@ public class Ball : MonoBehaviour
 		//Compute Swipe Direction
 		Vector2 swipeDirection = endTouchPosition - startTouchPosition;
 
-		//Block Back Swipe & Horizontal Swipe
-		float angle = Vector2.Angle(swipeDirection, Vector2.up);
-		if (angle >= 70f) return;
+        //Block Back Swipe & Horizontal Swipe
+        float angle = Vector2.Angle(swipeDirection, Vector2.up);
+
+        if (swipeDirection == Vector2.zero)
+		{
+            LaneController laneController = FindObjectOfType<LaneController>();
+            laneController.IncreaseRollCount();
+            return;
+		}
+
+		if (angle >= 70f)
+		{
+            LaneController laneController = FindObjectOfType<LaneController>();
+            laneController.IncreaseRollCount();
+            return;
+		}
 
 		isMove = true;
 

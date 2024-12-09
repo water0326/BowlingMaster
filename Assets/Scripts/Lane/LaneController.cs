@@ -58,6 +58,12 @@ public class LaneController : MonoBehaviour
 		commonHeader.UpdateRollCount(remainRollCount);
 	}
 
+	public void IncreaseRollCount()
+	{
+		remainRollCount++;
+		commonHeader.UpdateRollCount(remainRollCount);
+	}
+
 	public int GetRemainRollCount()
 	{
 		return remainRollCount;
