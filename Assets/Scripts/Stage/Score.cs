@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.UI;
+using System;
 
 public class Score : MonoBehaviour
 {
@@ -11,46 +11,50 @@ public class Score : MonoBehaviour
     [Header("핀 점수")]
     [SerializeField] private int pinScore = 100;
 
-    [Header("다수 핀 최소 갯수")]
-    [SerializeField] private int minCount = 2;
-
     [Header("다수 핀 추가 점수 비율")]
-    [SerializeField] private float multiScoreRate = 1.5f;
+    [SerializeField] private double scoreRate = 1.0f;
 
-    [Header("벽 충돌 횟수")]
-    [SerializeField] private int collisionScore = 20;
-
-    private int lastPin = 0;
+    private int lastPinCount = 0;
 
     private int starNum = -1;
+
+    private double scoreDecreaseRate;
 
     private void Start()
     {
         stage = FindObjectOfType<Stage>();
         pinChecker = FindObjectOfType<PinChecker>();
 
+        lastPinCount = stage.GetStartPinCount();
+
+        scoreRate = 1.0f;
+
         starNum = -1;
+
+        double value = 1.0 / stage.GetRollCount();
+
+        scoreDecreaseRate = Math.Round(value, 1);
     }
 
     public void UpdateScore()
     {
-        int pinCount = stage.GetStartPinCount() - pinChecker.GetPinCount();
+        // 이번 라운드에 친 핀 갯수 가져오기
+        int pinCount = lastPinCount - pinChecker.GetPinCount();
 
-        if (lastPin != pinCount && pinCount - lastPin > minCount)
-        {
-            int newCount = pinCount - lastPin;
+        // 점수 계산
+        currentScore += (int)(pinScore * pinCount * scoreRate);
 
-            lastPin = pinCount;
+        // Update
+        lastPinCount = stage.GetStartPinCount() - pinCount;
 
-            currentScore += (int)(newCount * pinScore * multiScoreRate);
-
-            multiScoreRate -= 0.2f;
-        }
+        scoreRate -= scoreDecreaseRate;
 
         for (int i = 0; i < stage.GetStarCount(); i++)
         {
+            Debug.Log("점수 업데이트");
             if (stage.GetStarScore(i) <= currentScore)
             {
+                Debug.Log(currentScore + "가 " + stage.GetStarScore(i) + "보다 큼");
                 starNum = i;
             }
         }
@@ -72,4 +76,8 @@ public class Score : MonoBehaviour
         else return true;
     }
 
+    public int GetPinScore()
+    {
+        return pinScore;
+    }
 }

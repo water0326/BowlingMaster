@@ -21,7 +21,7 @@ public class PinChecker : MonoBehaviour
 
         pinCount = pins.Length;
 
-        stage.UpdateStartPinCount(pinCount);
+        stage.UpdateStartPinCountAndScore(pinCount);
 
         commonHeader.UpdatePinCount(pinCount);
     }
