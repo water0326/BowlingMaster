@@ -3,24 +3,31 @@ using UnityEngine;
 
 public class Stage : MonoBehaviour
 {
-	[Header("�������� �� �� ���� ���� Ƚ�� (���� ����)")]
+	[Header("공 선택 가능 갯수")]
 	[SerializeField] private int[] selectableCount;
 
-	[Header("�������� �� ���� ���� �� �ִ� Ƚ�� (���� ����)")]
+	[Header("공 굴리는 횟수")]
 	[SerializeField] private int rollCount;
 
-	[Header("�� ���� �˾�")]
+	[Header("공 선택 횟수")]
 	[SerializeField] private GameObject ballSelectPopUp;
 
-	[Header("���� �� �迭")]
+	[Header("별점")]
 	[SerializeField] private int[] starScores;
 
 	[Header("카메라")]
 	[SerializeField] private CameraController cameraController;
 
+	[Header("Score Script")]
+	[SerializeField] private Score score;
+
 	private int startPinCount;
 
-	
+	private void Awake()
+	{
+		score = FindObjectOfType<Score>();
+        starScores = new int[3];
+    }
 
 	private void Start()
 	{
@@ -47,9 +54,14 @@ public class Stage : MonoBehaviour
 		return starScores[_index];
 	}
 
-	public void UpdateStartPinCount(int _count)
+	public void UpdateStartPinCountAndScore(int _count)
 	{
 		startPinCount = _count;
+
+        //최고점
+        starScores[2] = score.GetPinScore() * startPinCount;
+        starScores[1] = (int)(score.GetPinScore() * startPinCount * 0.5);
+        starScores[0] = (int)(score.GetPinScore() * startPinCount * 0.1);
 	}
 
 	public int GetStartPinCount()

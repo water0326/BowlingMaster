@@ -21,6 +21,8 @@ public class FinishLine : MonoBehaviour
 	
 	public GameObject currentBall;
 
+	private Coroutine coroutine;
+
 	private void Start()
 	{
 		lane = FindObjectOfType<LaneController>();
@@ -40,7 +42,9 @@ public class FinishLine : MonoBehaviour
 
 	public void DeadBall(Collider2D collision)
 	{
-		StartCoroutine(InitCoroutine(collision));
+		if (coroutine != null) return;
+
+		coroutine = StartCoroutine(InitCoroutine(collision));
 	}
 	
 	public void SkipBall() 
@@ -62,5 +66,7 @@ public class FinishLine : MonoBehaviour
 		score.UpdateScore();
 
 		pinChecker.CheckPin();
+
+		StopAllCoroutines();
 	}
 }
