@@ -79,8 +79,6 @@ public class CurveBall : Ball
 		//Compute Swipe Direction
 		Vector2 swipeDirection = curveEnd - curveStart;
 
-		if (swipeDirection.y <= 0) return;
-
 		canCurve = false;
 
 		animator.SetBool("isRoll", true);

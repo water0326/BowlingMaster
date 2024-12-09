@@ -124,6 +124,7 @@ public class Ball : MonoBehaviour
 		if (angle >= 70f) return;
 
 		isMove = true;
+		SoundManager.Instance.PlaySFXFromPath("Audio/SFX/BallRoll");
 
 		Invoke("MoveDelay", moveDelay);
 		Invoke("ActiveSkipButton", 2f);
