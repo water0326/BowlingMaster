@@ -38,8 +38,10 @@ public class Ball : MonoBehaviour
 	private Vector2 endTouchPosition;
 
 	protected Animator animator;
-	
-	private Coroutine checkVelocityCoroutine;
+
+	private FinishLine finishLine;
+
+	private LaneController laneController;
 
 	private void OnEnable()
 	{
@@ -47,7 +49,10 @@ public class Ball : MonoBehaviour
 		isMove = false;
 		canSkill = false;
 		isDead = false;
-		FinishLine finishLine = FindObjectOfType<FinishLine>();
+
+		finishLine = FindObjectOfType<FinishLine>();
+		laneController = FindObjectOfType<LaneController>();
+
 		finishLine.currentBall = this.gameObject;
 	}
 
@@ -99,7 +104,6 @@ public class Ball : MonoBehaviour
 						isDragging = false;
 						endTouchPosition = touch.position;
 
-						LaneController laneController = FindObjectOfType<LaneController>();
 						laneController.DecreaseRollCount();
 						onArrowEvent.RaiseEvent(false);
 
@@ -124,14 +128,12 @@ public class Ball : MonoBehaviour
 
         if (swipeDirection == Vector2.zero)
 		{
-            LaneController laneController = FindObjectOfType<LaneController>();
             laneController.IncreaseRollCount();
             return;
 		}
 
 		if (angle >= 70f)
 		{
-            LaneController laneController = FindObjectOfType<LaneController>();
             laneController.IncreaseRollCount();
             return;
 		}
@@ -145,6 +147,7 @@ public class Ball : MonoBehaviour
 
 		//Constraint Min Speed and Max Speed
 		float force = swipeDirection.magnitude;
+
 		if (force < minSpeed) force = minSpeed;
 		else if (force > maxSpeed) force = maxSpeed;   
 
@@ -157,7 +160,6 @@ public class Ball : MonoBehaviour
 
 	void ActiveSkipButton() 
 	{
-		FinishLine finishLine = FindObjectOfType<FinishLine>();
 		finishLine.skipButton.SetActive(true);
 	}
 
@@ -177,40 +179,13 @@ public class Ball : MonoBehaviour
 
 	public void DeadBall()
 	{
-		if(transform.position.y < -4.6f && isMove && !isDead) // POOP CODE
+        if ((transform.position.y < -4.6f && !isDead) || (transform.position.y > finishLine.transform.position.y && !isDead)) // POOP CODE
 		{
 			isDead = true;
-			FinishLine finishLine = FindObjectOfType<FinishLine>();
-			finishLine.DeadBall(col);
+
+            finishLine.DeadBall(col);
 		}
 	}
-	
-	private IEnumerator CheckVelocity(Collider2D col)
-	{
-		float elapsedTime = 0f;
-		float checkDuration = 10f;
-		
-		while(elapsedTime < checkDuration)
-		{
-			if(rb.velocity.y >= 0f)
-			{
-				checkVelocityCoroutine = null;
-				yield break;
-			}
-
-			elapsedTime += Time.deltaTime;
-			yield return null;
-		}
-		isDead = true;
-
-		FinishLine finishLine = FindObjectOfType<FinishLine>();
-		if(col != null)
-		{
-			finishLine.DeadBall(col);
-		}
-	}
-	
-	
 	
 	protected void ForceDeadBall()
 	{

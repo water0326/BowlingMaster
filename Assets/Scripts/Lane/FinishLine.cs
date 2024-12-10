@@ -68,5 +68,7 @@ public class FinishLine : MonoBehaviour
 		pinChecker.CheckPin();
 
 		StopAllCoroutines();
+
+		coroutine = null;
 	}
 }
