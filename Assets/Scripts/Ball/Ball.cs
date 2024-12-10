@@ -139,6 +139,7 @@ public class Ball : MonoBehaviour
 		}
 
 		isMove = true;
+		SoundManager.Instance.PlaySFXFromPath("Audio/SFX/BallRoll");
 
 		Invoke("MoveDelay", moveDelay);
 		Invoke("ActiveSkipButton", 2f);

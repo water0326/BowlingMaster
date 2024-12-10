@@ -3,13 +3,13 @@ using UnityEngine;
 
 public class Precipice : MonoBehaviour
 {
-    [Header("Å©±â°¡ °¨¼ÒÇÏ´Â µ¥ °É¸®´Â ½Ã°£")]
+    [Header("Å©ï¿½â°¡ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ ï¿½É¸ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½")]
     [SerializeField] private float shrinkDuration = 2f;
 
-    [Header("ÀÌµ¿ ¼Óµµ °¨¼Ò ºñÀ²")]
+    [Header("ï¿½Ìµï¿½ ï¿½Óµï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")]
     [SerializeField] private float decreaseSpeedRate = 0.05f;
 
-    [Header("¶ó¿îµå Á¾·á¸¦ °ü¸®ÇÏ´Â FinishLine ÄÄÆ÷³ÍÆ®")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½á¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ FinishLine ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®")]
     [SerializeField] private FinishLine finishLine;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +29,7 @@ public class Precipice : MonoBehaviour
             rigid.velocity *= decreaseSpeedRate;
         }
 
-        StartCoroutine(Shrink(collision));
+        if (!IsInvoking("Shrink")) StartCoroutine(Shrink(collision));
     }
 
     IEnumerator Shrink(Collider2D collision)
@@ -39,15 +39,18 @@ public class Precipice : MonoBehaviour
 
         while (currentTime < shrinkDuration)
         {
-            // ½Ã°£¿¡ µû¶ó Å©±â °¨¼Ò
+            // ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             collision.transform.localScale = Vector3.Lerp(originalScale, Vector3.zero, currentTime / shrinkDuration);
             currentTime += Time.deltaTime;
             yield return null; 
         }
 
-        // Å©±â¸¦ ¿ÏÀüÈ÷ 0À¸·Î ¼³Á¤
+        // Å©ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         collision.transform.localScale = Vector3.zero;
-
+        if(finishLine == null) 
+        {
+        	finishLine = FindObjectOfType<FinishLine>();
+        }
         if (collision.CompareTag("Ball")) finishLine.DeadBall(collision);
 
         StopAllCoroutines();
