@@ -21,6 +21,7 @@ public class BombBall : Ball
 		if (!DetectSkill()) return;
 
 		canSkill = false;
+		SoundManager.Instance.PlaySFXFromPath("Audio/SFX/BombBall_Skill");
 
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(explosinoPosition, explosionRadius);
 

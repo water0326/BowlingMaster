@@ -40,6 +40,13 @@ public class UI_StageClear : MonoBehaviour
 		if (int.TryParse(System.Text.RegularExpressions.Regex.Match(sceneName, @"\d+").Value, out int stageNumber))
 		{
 			DataManager.Instance.SaveClearedStage(stageNumber);
+			
+			// 다음 씬이 있는지 확인
+			int nextSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1;
+			if (nextSceneIndex >= UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings)
+			{
+				nextStage.interactable = false; // 다음 씬이 없으면 버튼 비활성화
+			}
 		}
 	}
 }

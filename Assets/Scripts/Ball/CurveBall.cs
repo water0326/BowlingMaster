@@ -35,7 +35,9 @@ public class CurveBall : Ball
 		isSkilling = true;
 		rb.velocity = Vector3.zero;
 
+		animator.SetBool("isSkill", true);
 		animator.SetBool("isRoll", false);
+		SoundManager.Instance.PlaySFXFromPath("Audio/SFX/CurveBall_Skill");
 
 		Invoke("CurveDelay", curveDelay);
 	}
@@ -82,6 +84,7 @@ public class CurveBall : Ball
 		canCurve = false;
 
 		animator.SetBool("isRoll", true);
+		animator.SetBool("isSkill", false);
 
 		float force = swipeDirection.magnitude;
 		if (force < minSpeed) force = minSpeed;
