@@ -54,10 +54,12 @@ The game features **five types of bowling balls** with distinct abilities:
 
 ### Game Stages and Features
 - **Intro Scene**: Introducing the backstory of Ako and Nikko.
-![Intro Scene](path/to/intro-scene.png)
+![스토리](https://github.com/user-attachments/assets/7e7414ad-5e3e-4f4e-b8f2-fbe2c446331b)
 
 - **Gameplay Screen**: Choose your bowling ball and strategize your throws.
-![Gameplay](path/to/gameplay-screen.png)
+![스테이지](https://github.com/user-attachments/assets/1405d516-9324-4f35-a54b-207335f27092)
+![스테이지_볼링공 굴릴때](https://github.com/user-attachments/assets/ec904264-038d-4b67-a12f-5ce07fadc1e8)
+![스테이지 진행중](https://github.com/user-attachments/assets/9b8715d7-7643-4a87-ac01-437424fc3ab6)
 
 ---
 
@@ -79,21 +81,6 @@ The game features **five types of bowling balls** with distinct abilities:
 ### Lessons Learned
 - The importance of thorough planning and systematic development processes.
 - Creative game design requires balancing fun and complexity.
-
----
-
-## 📂 Resources
-
-### Assets
-- **Simple Cartoon UI**: Provides a polished, cartoon-style UI for the game.
-  - [View on Asset Store](https://assetstore.unity.com/packages/2d/gui/simple-cartoon-ui-225102)
-
-### Audio
-| **Name**         | **Type**   | **Description**                           | **Source**                        |
-|-------------------|------------|-------------------------------------------|------------------------------------|
-| **Village BGM**   | Background | Lobby scene music                         | [Link](http://mewc.at/f1540)      |
-| **Stage BGM**     | Background | Stage scene music                         | [Link](http://mewc.at/f133)       |
-| **Special SFX**   | SFX        | Sound effects for special bowling skills  | [Link](http://mewc.at/f1266)      |
 
 ---
 
