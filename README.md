@@ -66,8 +66,8 @@ The game features **five types of bowling balls** with distinct abilities:
 
 - **Gameplay Screen**: Choose your bowling ball and strategize your throws.
 
-<img src="https://github.com/user-attachments/assets/1405d516-9324-4f35-a54b-207335f27092" width="33%"/>
-<img src="https://github.com/user-attachments/assets/ec904264-038d-4b67-a12f-5ce07fadc1e8" width="33%"/>
+<img src="https://github.com/user-attachments/assets/1405d516-9324-4f35-a54b-207335f27092" width="31.5%"/>
+<img src="https://github.com/user-attachments/assets/ec904264-038d-4b67-a12f-5ce07fadc1e8" width="32.1%"/>
 <img src="https://github.com/user-attachments/assets/9b8715d7-7643-4a87-ac01-437424fc3ab6" width="33%"/>
 
 ---
