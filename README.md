@@ -40,13 +40,20 @@ The game features **five types of bowling balls** with distinct abilities:
 
 ---
 
+## 🚀 How to Play
+
+1. Drag to set the ball's direction and power.
+2. Use special balls to overcome obstacles and hit all pins.
+3. Complete stages with limited attempts to earn stars and unlock new levels.
+
+---
+
 ## 🛠️ Tech Stack
 
 | **Category**     | **Stack**   |
 |-------------------|-------------|
 | **Game Engine**   | `Unity`     |
 | **Programming**   | `C#`        |
-| **Assets**        | Simple Cartoon UI ([Asset Link](https://assetstore.unity.com/packages/2d/gui/simple-cartoon-ui-225102)) |
 
 ---
 
@@ -54,12 +61,14 @@ The game features **five types of bowling balls** with distinct abilities:
 
 ### Game Stages and Features
 - **Intro Scene**: Introducing the backstory of Ako and Nikko.
-![스토리](https://github.com/user-attachments/assets/7e7414ad-5e3e-4f4e-b8f2-fbe2c446331b)
+
+<img src="https://github.com/user-attachments/assets/7e7414ad-5e3e-4f4e-b8f2-fbe2c446331b" width="33%"/>
 
 - **Gameplay Screen**: Choose your bowling ball and strategize your throws.
-![스테이지](https://github.com/user-attachments/assets/1405d516-9324-4f35-a54b-207335f27092)
-![스테이지_볼링공 굴릴때](https://github.com/user-attachments/assets/ec904264-038d-4b67-a12f-5ce07fadc1e8)
-![스테이지 진행중](https://github.com/user-attachments/assets/9b8715d7-7643-4a87-ac01-437424fc3ab6)
+
+<img src="https://github.com/user-attachments/assets/1405d516-9324-4f35-a54b-207335f27092" width="33%"/>
+<img src="https://github.com/user-attachments/assets/ec904264-038d-4b67-a12f-5ce07fadc1e8" width="33%"/>
+<img src="https://github.com/user-attachments/assets/9b8715d7-7643-4a87-ac01-437424fc3ab6" width="33%"/>
 
 ---
 
@@ -67,27 +76,7 @@ The game features **five types of bowling balls** with distinct abilities:
 
 | **Name**   | **Role**                   | **Contributions**                                                                                                                                         |
 |------------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Lee Jung** | Frontend, Visual Design   | Created art assets, story scenes, and stage designs. Developed UI/UX features and local data systems.                                                     |
-| **No Yurae** | Backend, System Developer | Designed the game system architecture and gameplay mechanics, including ball physics and special skill programming.                                        |
-
----
-
-## 📝 Development Insights
-
-### Challenges
-1. Designing a flexible class structure for the diverse ball mechanics.
-2. Debugging and optimizing gameplay logic to ensure smooth performance.
-
-### Lessons Learned
-- The importance of thorough planning and systematic development processes.
-- Creative game design requires balancing fun and complexity.
-
----
-
-## 🚀 How to Play
-
-1. Drag to set the ball's direction and power.
-2. Use special balls to overcome obstacles and hit all pins.
-3. Complete stages with limited attempts to earn stars and unlock new levels.
+| **Jeong Lee** | Frontend, Visual Design   | Created art assets, story scenes, and stage designs. Developed UI/UX features and local data systems.                                                     |
+| **Yurae No** | Backend, System Developer | Designed the game system architecture and gameplay mechanics, including ball physics and special skill programming.                                        |
 
 ---
