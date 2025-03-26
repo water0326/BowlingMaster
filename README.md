@@ -8,6 +8,9 @@ Bowling Master is an engaging and strategic bowling game where players utilize a
 
 ## 📖 Storyline
 
+<img src="https://github.com/user-attachments/assets/9dac1cea-2baa-4da4-8d8b-bf01dfb9f761" width="10.5%"/>
+<img src="https://github.com/user-attachments/assets/134f51cc-0a6c-428c-aa65-0359f66f19a8" width="10.5%"/>
+
 In the peaceful village of **Pin Town**, bowling is more than just a sport; it's a way of life. However, chaos strikes when a giant bowling ball destroys the home of a small, peaceful creature named **Ako**. The culprit? **Nikko**, the best bowler in the village, who shows no remorse for his actions.
 
 Determined to seek justice, Ako decides to master the art of bowling and challenge Nikko in a battle of skill and strategy.
@@ -23,6 +26,13 @@ Determined to seek justice, Ako decides to master the art of bowling and challen
 
 ### ⚡ Special Bowling Balls
 The game features **five types of bowling balls** with distinct abilities:
+
+<img src="https://github.com/user-attachments/assets/9af45d82-b5ad-46bb-9f7a-e26fb0a8b04c" width="10.5%"/>
+<img src="https://github.com/user-attachments/assets/90543fd9-6483-4d18-9d77-4c359af4105b" width="10.5%"/>
+<img src="https://github.com/user-attachments/assets/5abdeb0f-01b6-4b20-8ca8-888aec1bb2ff" width="10.5%"/>
+<img src="https://github.com/user-attachments/assets/502aa5b1-902f-45de-b537-771f46fe4e0a" width="10.5%"/>
+<img src="https://github.com/user-attachments/assets/3909ed40-9f40-4762-9f12-94484238a1b7" width="10.5%"/>
+
 1. **Basic Ball**: A standard bowling ball with no special abilities.
 2. **Vine Ball**: Creates a bridge over gaps, allowing other balls to cross safely.
 3. **Bomb Ball**: Explodes to clear obstacles or knock down distant pins.
