@@ -28,10 +28,11 @@ Determined to seek justice, Ako decides to master the art of bowling and challen
 The game features **five types of bowling balls** with distinct abilities:
 
 <img src="https://github.com/user-attachments/assets/9af45d82-b5ad-46bb-9f7a-e26fb0a8b04c" width="10.5%"/>
+<img src="https://github.com/user-attachments/assets/3909ed40-9f40-4762-9f12-94484238a1b7" width="10.5%"/>
 <img src="https://github.com/user-attachments/assets/90543fd9-6483-4d18-9d77-4c359af4105b" width="10.5%"/>
 <img src="https://github.com/user-attachments/assets/5abdeb0f-01b6-4b20-8ca8-888aec1bb2ff" width="10.5%"/>
 <img src="https://github.com/user-attachments/assets/502aa5b1-902f-45de-b537-771f46fe4e0a" width="10.5%"/>
-<img src="https://github.com/user-attachments/assets/3909ed40-9f40-4762-9f12-94484238a1b7" width="10.5%"/>
+
 
 1. **Basic Ball**: A standard bowling ball with no special abilities.
 2. **Vine Ball**: Creates a bridge over gaps, allowing other balls to cross safely.
